@@ -3,14 +3,17 @@ import Register from './modules/register.js'
 import Login    from './modules/login.js'
 import Wall     from './modules/wall.js'
 import Groups   from './modules/groups.js'
-
-import Utils from './modules/utils.js'
+import Navbar   from './modules/nav.js'
+import Utils    from './modules/utils.js'
 
 const routes = {
-    '/'         : Login
+   
+    '/Wall'          : Wall   
+    ,'/'             : Login
     ,'/register'     : Register
-    ,'/Wall'             : Wall
-    ,'/Groups'       : Groups
+    ,'/groups'       : Groups
+    ,'/nav'          : Navbar
+    
 };
 
 const router = async () => { 
@@ -18,8 +21,8 @@ const router = async () => {
     
     const header  = document.getElementById('header-container'); 
     const content = null || document.getElementById('page-container'); 
-    /*header.innerHTML = await Navbar.render();
-    await Navbar.after_render();*/
+    header.innerHTML = await Navbar.render();
+    await Navbar.after_render();
     
     
     let request = Utils.parseRequestURL();
