@@ -1,6 +1,6 @@
 let Groups = {
     render : async () => {
-        let view = /* html */ `
+        let view = `
             <h1> ESTOS SON MIS GRUPOS</h1>
         `;
         return view
