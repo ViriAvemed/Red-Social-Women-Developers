@@ -1,6 +1,6 @@
 let Login = {
     render : async () => {
-        let view = /* html */ `
+        let view =`
             <h1>LOGIN </h1>
             <input type="text" id="emailLogin" placeholder="Correo electrónico">
             <input type="text" id="passwordLogin" placeholder="Contraseña">
