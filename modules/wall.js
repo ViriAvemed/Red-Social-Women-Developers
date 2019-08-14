@@ -1,6 +1,6 @@
 let Wall = {
     render : async () => {
-        let view = /* html */ `
+        let view =`
             <h1>AQUI VA EL MURO</h1>
         `;
         return view

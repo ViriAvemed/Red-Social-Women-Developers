@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="0c2b5483-6225-4e2f-9d6c-cf72d792567f" name="Default Changelist" comment="" />
+=======
     <list default="true" id="555ac2b3-2915-44dc-8a5c-bd609fd0eb39" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
@@ -21,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/modules/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/wall.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/wall.js" afterDir="false" />
     </list>
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -31,6 +35,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+=======
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
@@ -112,12 +124,23 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -167,11 +190,16 @@
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,11 +216,19 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MEX008-social-network" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -202,6 +238,7 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Avellaneda\Documents\laboratoria\WOMENDEV-SocialNetworkProject\modules" />
     </key>
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -220,16 +257,36 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="0c2b5483-6225-4e2f-9d6c-cf72d792567f" name="Default Changelist" comment="" />
+      <created>1565735915324</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565735915324</updated>
+      <workItem from="1565735916621" duration="1798000" />
+      <workItem from="1565808648501" duration="259000" />
+=======
       <changelist id="555ac2b3-2915-44dc-8a5c-bd609fd0eb39" name="Default Changelist" comment="" />
       <created>1565752173028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565752173028</updated>
       <workItem from="1565752174613" duration="14063000" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="2057000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+=======
     <option name="totallyTimeSpent" value="14063000" />
   </component>
   <component name="ToolWindowManager">
@@ -243,6 +300,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -250,10 +308,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+=======
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+<<<<<<< HEAD
+=======
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22544643" />
@@ -273,11 +340,18 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+=======
     <entry file="file://$PROJECT_DIR$/modules/groups.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -348,6 +422,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+>>>>>>> cfa689e1e7466e82260de46e395a57e4da75a93e
         </state>
       </provider>
     </entry>
