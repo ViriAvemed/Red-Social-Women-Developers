@@ -1,6 +1,6 @@
 let Navbar = {
     render : async () => {
-        let view = /* html */ `
+        let view = `
         <nav>
             <ul>
                 <li><a href = "./#/profile/">PERFIL</a></li> 
