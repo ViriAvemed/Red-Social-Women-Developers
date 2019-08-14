@@ -10,14 +10,11 @@ import Navbar   from './modules/nav.js'
 import Utils    from './modules/utils.js'
 
 const routes = {
-
-
     '/'              : Login
    ,'/register'      : Register
     ,'/wall'         : Wall
     ,'/groups'       : Groups
     ,'/profile'      : Profile
-
 
 };
 
@@ -26,7 +23,6 @@ const router = async () => {
 
     const header  = document.getElementById('header-container');
     const content = document.getElementById('page-container');
-
 
     let request = Utils.parseRequestURL();
 
