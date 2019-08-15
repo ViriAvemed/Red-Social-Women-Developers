@@ -39,10 +39,9 @@ const router = async () => {
     let parsedURL = (request.resource ? '/' + request.resource : '/')
         + (request.id ? '/:id' : '')
         + (request.verb ? '/' + request.verb : '');
-console.log(parsedURL);
 
-    let isLoged = sessionStorage.getItem('sesion');
-    console.log(isLoged);
+
+    let isLoged = sessionStorage.getItem('sesion' );
 
         if(isLoged==='true'){
             console.log('privada');

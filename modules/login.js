@@ -37,7 +37,7 @@ let Login = {
                     sessionStorage.setItem('sesion', "true");
 
                     if (user.user.emailVerified) {
-                        window.location = "/wall";
+                        window.location = "/WOMENDEV-SocialNetworkProject/#/wall";
                     }
 
                 }).catch((error)=> {
@@ -58,8 +58,9 @@ let Login = {
                     console.log("Iniciando con tu cuenta de google");
                     sessionStorage.setItem('sesion', "true");
 
+
                     if(user.user.emailVerified){
-                      window.location="/wall";
+                      window.location="/WOMENDEV-SocialNetworkProject/#/wall";
                     }
 
                 }).catch((error)=> {
