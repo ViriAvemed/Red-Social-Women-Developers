@@ -25,14 +25,14 @@ let Login = {
         const btnAccess = document.getElementById("access");
         const btnLoginGoogle = document.getElementById("enterWithGoogle");
         const btnfacebook = document.getElementById("idbtnfacebook");
-        const btngithub= document.getElementById("idbtngithub");
+        const btngithub = document.getElementById("idbtngithub");
 
         const loginUser = () => {
             let emailLo = idEmailLogin.value;
             let passwordLo = idPassLogin.value;
 
             firebase.auth().signInWithEmailAndPassword(emailLo, passwordLo)
-                .then((user)=> {
+                .then((user) => {
                     console.log("Iniciando con tu cuenta de google");
                     sessionStorage.setItem('sesion', "true");
 
@@ -40,7 +40,7 @@ let Login = {
                         window.location = "/WOMENDEV-SocialNetworkProject/#/wall";
                     }
 
-                }).catch((error)=> {
+                }).catch((error) => {
 
                     const errorCode = error.code;
                     const errorMessage = error.message;
@@ -54,26 +54,24 @@ let Login = {
         const loginGoogle = () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider)
-                .then((user)=> {
+                .then((user) => {
                     console.log("Iniciando con tu cuenta de google");
                     sessionStorage.setItem('sesion', "true");
 
 
-                    if(user.user.emailVerified){
-                      window.location="/WOMENDEV-SocialNetworkProject/#/wall";
+                    if (user.user.emailVerified) {
+                        window.location = "/WOMENDEV-SocialNetworkProject/#/wall";
                     }
 
-                }).catch((error)=> {
+                }).catch((error) => {
                     console.log(error);
                 })
         };
 
-
-
         //Login Facebook
         const loginFacebook = () => {
             let provider = new firebase.auth.FacebookAuthProvider();
-            provider.addScope('user_birthday');
+            provider.addScope('public_profile');
             firebase.auth().signInWithPopup(provider)
                 .then((result) => {
                     const token = result.credential.accessToken;
@@ -90,26 +88,6 @@ let Login = {
 
         };
 
-        const observatoryFacebook = () => {
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                    console.log("Existe usuario activo");
-                    var displayName = user.displayName;
-                    var email = user.email;
-                    var emailVerified = user.emailVerified;
-                    console.log(user.emailVerified);
-                    var photoURL = user.photoURL;
-                    var isAnonymous = user.isAnonymous;
-                    var uid = user.uid;
-                    var providerData = user.providerData;
-                } else {
-                    // User is signed out.
-                    console.log("No existe usuario activo");
-                }
-            }) 
-        };
-        observatoryFacebook();
-        
         //Login GitHub
         const loginGitHub = () => {
             let provider = new firebase.auth.GithubAuthProvider();
@@ -123,37 +101,36 @@ let Login = {
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     const credential = error.credential;
-                    console.log(errorMessage);
-                    console.log(errorCode);
+                    //console.log(errorMessage);
+                    //console.log(errorCode);
                 });
-
         };
 
 
-        const observatoryGitHub = () => {
+        const authenticationObserver = () => {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     console.log("Existe usuario activo");
-                    var displayName = user.displayName;
-                    var email = user.email;
-                    var emailVerified = user.emailVerified;
+                    const displayName = user.displayName;
+                    const email = user.email;
+                    const emailVerified = user.emailVerified;
                     console.log(user.emailVerified);
-                    var photoURL = user.photoURL;
-                    var isAnonymous = user.isAnonymous;
-                    var uid = user.uid;
-                    var providerData = user.providerData;
+                    const photoURL = user.photoURL;
+                    const isAnonymous = user.isAnonymous;
+                    const uid = user.uid;
+                    const providerData = user.providerData;
                 } else {
                     // User is signed out.
                     console.log("No existe usuario activo");
                 }
-            }) 
+            })
         };
-        observatoryGitHub();
+        authenticationObserver();
 
         btnAccess.addEventListener("click", loginUser);
         btnLoginGoogle.addEventListener("click", loginGoogle);
         btnfacebook.addEventListener("click", loginFacebook);
-        btngithub.addEventListener("click", loginGitHub);   
+        btngithub.addEventListener("click", loginGitHub);
     }
 };
 
