@@ -3,7 +3,7 @@ let Login = {
         let view = `
             <h1>LOGIN </h1>
             <input type="text" id="emailLogin" placeholder="Correo electrónico">
-            <input type="text" id="passwordLogin" placeholder="Contraseña">
+            <input type="password" id="passwordLogin" placeholder="Contraseña">
             <button id="access">Ingresar</button>
             <button id="enterWithGoogle">Iniciar con Google</button>
             <p>¿Eres nueva? <a href = "./#/register">REGISTRATE</a> </p>
@@ -32,8 +32,15 @@ let Login = {
             let passwordLo = idPassLogin.value;
 
             firebase.auth().signInWithEmailAndPassword(emailLo, passwordLo)
+                .then((user)=> {
+                    console.log("Iniciando con tu cuenta de google");
+                    sessionStorage.setItem('sesion', "true");
 
-                .catch(function (error) {
+                    if (user.user.emailVerified) {
+                        window.location = "/wall";
+                    }
+
+                }).catch((error)=> {
 
                     const errorCode = error.code;
                     const errorMessage = error.message;
@@ -47,33 +54,20 @@ let Login = {
         const loginGoogle = () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider)
-                .then(function (user) {
+                .then((user)=> {
                     console.log("Iniciando con tu cuenta de google");
-                }).catch(function (error) {
+                    sessionStorage.setItem('sesion', "true");
+
+                    if(user.user.emailVerified){
+                      window.location="/wall";
+                    }
+
+                }).catch((error)=> {
                     console.log(error);
                 })
         };
 
-        const observatory = () => { //verifica si el usuario entro a su cuenta
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                    console.log("Existe usuario activo");
-                    const displayName = user.displayName;
-                    const email = user.email;
-                    const emailVerified = user.emailVerified;
-                    console.log(user.emailVerified);
-                    const photoURL = user.photoURL;
-                    const isAnonymous = user.isAnonymous;
-                    const uid = user.uid;
-                    const providerData = user.providerData;
 
-                } else {
-                    // User is signed out.
-                    console.log("No existe usuario activo");
-                }
-            });
-        };
-        observatory();
 
         //Login Facebook
         const loginFacebook = () => {
@@ -83,6 +77,8 @@ let Login = {
                 .then((result) => {
                     const token = result.credential.accessToken;
                     const userData = result.user;
+
+
                 }).catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
@@ -121,6 +117,7 @@ let Login = {
                 .then((result) => {
                     const token = result.credential.accessToken;
                     const userData = result.user;
+
                 }).catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;

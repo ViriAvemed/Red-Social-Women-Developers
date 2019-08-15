@@ -21,6 +21,8 @@ let Navbar = {
             firebase.auth().signOut()
                 .then(function() {
                 console.log("saliendo...")
+                    sessionStorage.clear();
+                    window.location='/';
             }).catch(function(error) {
                 console.log(error)
             });
@@ -31,3 +33,5 @@ let Navbar = {
 };
 
 export default Navbar;
+
+
