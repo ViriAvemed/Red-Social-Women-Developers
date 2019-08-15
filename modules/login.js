@@ -32,8 +32,15 @@ let Login = {
             let passwordLo = idPassLogin.value;
 
             firebase.auth().signInWithEmailAndPassword(emailLo, passwordLo)
+                .then((user)=> {
+                    console.log("Iniciando con tu cuenta de google");
+                    sessionStorage.setItem('sesion', "true");
 
-                .catch((error)=> {
+                    if (user.user.emailVerified) {
+                        window.location = "/wall";
+                    }
+
+                }).catch((error)=> {
 
                     const errorCode = error.code;
                     const errorMessage = error.message;
@@ -70,6 +77,7 @@ let Login = {
                 .then((result) => {
                     const token = result.credential.accessToken;
                     const userData = result.user;
+
 
                 }).catch((error) => {
                     const errorCode = error.code;
