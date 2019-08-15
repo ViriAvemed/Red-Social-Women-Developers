@@ -1,12 +1,12 @@
 let Navbar = {
     render : async () => {
         let view = /* html */ `
-        <nav>
+        <nav id="nav">
             <ul>
                 <li><a href = "./#/profile/">PERFIL</a></li> 
                 <li><a href = "./#/wall/">MURO</a></li>
                 <li><a href = "./#/groups/">GRUPOS</a></li>
-                <li id="signOff"><a href = "./#/">CERRAR SESIÓN</a></li>
+               <li></li> <button id="closer">CERRAR SESIÓN</li>
             </ul>
         </nav>
             
@@ -15,14 +15,15 @@ let Navbar = {
     },
     after_render : async () => {
 
-        const btnCloser = document.getElementById("signOff");
+        const btnCloser = document.getElementById("closer");
 
         const singOut =()=>{
             firebase.auth().signOut()
                 .then(function() {
-                console.log("saliendo...")
+                console.log("cerraste sesión ");
                     sessionStorage.clear();
-                    window.location='/';
+                    window.location = "/WOMENDEV-SocialNetworkProject/#/";
+                    document.getElementById("nav").style.display = "none";
             }).catch(function(error) {
                 console.log(error)
             });
