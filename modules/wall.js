@@ -16,12 +16,7 @@ let Wall = {
         return view
     },
     after_render: async () => {
-// Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-    apiKey: "AIzaSyBpOxYDjb9ul17eymW4maik_ZOxB6b0xcA",
-    authDomain: "prueba-de-redsocial.firebaseapp.com",
-    projectId: "prueba-de-redsocial"
-  });
+
   
 var db = firebase.firestore();
   
