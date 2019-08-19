@@ -1,23 +1,53 @@
 let Register = {
     render : async () => {
         let view =  `
-            <h1>REGISTRO</h1>
-            <a href="#login"> <img src="./img/anterior.png" > </a>
-            <p> Crea tu cuenta aquí</p>
-            <input type="text" id="nameRegister" placeholder="Nombre completo">
-            <span id="nameInvalid"></span>
-            
-            <input type="email" id="registerEmail" placeholder="Correo electrónico">
-            <span id="emailInvalid"></span>
-            
-            <input type="password" id="registerPassword" placeholder="Tu contraseña debe tener más de ses caracteres">
-            <span id="passwordInvalid"></span>
-            
-            <input type="password" id="confirmPasswordRegister" placeholder="Confirmar Contraseña">
-            <span id="passwordDifferent"></span>
-            
-            <button id="createUser">Crear cuenta</button><br><br>
-            <span id="sentEmailVerify"></span>
+  <div class="container backLogin">
+                <div class="row">
+                    <div class="ccolumna col-lg-6 col-sm-12 d-flex justify-content-center"><img class="logo" src="img/logo.png" alt=""></div>                
+                </div>
+  
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><p style="font-size: 25px"> Registrate</p></div>                
+                </div>
+                
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><a href="#login"> <i class="icon-left-circled"></i> </a></div>                
+                </div>
+                
+                <div class="row">
+                    <div class="ccolumna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="text" id="nameRegister" placeholder="Nombre completo"></div>                
+                </div>
+                
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"> <span id="nameInvalid"></span></div>                
+                </div>
+                
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="email" id="registerEmail" placeholder="Correo electrónico"></div>  
+                </div> 
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" > <span id="emailInvalid"></span></div>               
+                </div>
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" ><input type="password" id="registerPassword" placeholder="Tu contraseña debe tener más de ses caracteres"></div>                
+                </div>
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><span id="passwordInvalid"></span></div>                
+                </div>      
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="password" id="confirmPasswordRegister" placeholder="Confirmar Contraseña"></span></div>                
+                </div>   
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><span id="passwordDifferent"></span></div>                
+                </div>   
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><button id="createUser">Crear cuenta</button></div>                
+                </div>   
+                <div class="row">
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><span id="sentEmailVerify"></span></div>                
+                </div>        
+            </div>
+
         `;
         return view
     },
@@ -80,7 +110,7 @@ let Register = {
         const verifyEmail =()=>{
             const user = firebase.auth().currentUser;
             user.sendEmailVerification().then(function () {
-                sentEmail.innerHTML ="Se ha enviado un mensaje a tu correo eléctronico. Por favor haz click en el vínculo para completar la verificación.";
+                sentEmail.innerHTML ="Se ha enviado un mensaje de confirmación tu correo eléctronico.";
             }).catch(function (error) {
                console.log(error);
                 });
