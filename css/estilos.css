@@ -246,6 +246,24 @@ main .contenido-principal .publicar form button:hover{
     color: #5A5F73;
 }
 
+
+/*Grupos*/
+
+.misGrupos{
+    color: #1cbacc;
+    font-size: 30px;
+    font-family: Roboto,sans-serif;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.grupos {
+    color: #5A5F73;
+    font-size: 18px;
+    font-family: Roboto,sans-serif;
+    padding: 10px 0;
+}
+
 /*BARRA LATERAL DERECHA*/
 
 main .barra-lateral-derecha h3{
