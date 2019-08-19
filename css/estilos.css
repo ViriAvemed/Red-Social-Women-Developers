@@ -340,6 +340,12 @@ main .barra-lateral-derecha .ads a img{
 
 }
 
+/*PERFIL*/
+
+.fotoPerfil{
+    width: 240px;
+}
+
 /*MEDIA QUERIES*/
 
 
