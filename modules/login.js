@@ -94,22 +94,36 @@ let Login = {
 
         //Login Facebook
         const loginFacebook = () => {
+            if (!firebaase.auth().currentUser){
             let provider = new firebase.auth.FacebookAuthProvider();
-            provider.addScope('public_profile');
+            provider.addScope('user_birthday');
             firebase.auth().signInWithPopup(provider)
                 .then((result) => {
+                    console.log("Iniciando con tu cuenta de facebook");
+                    sessionStorage.setItem('sesion', "true");
                     const token = result.credential.accessToken;
-                    const userData = result.user;
-
+                    const user = result.user;
+                    document.getElementById('idbtnfacebook').textContent = token;
+                    
+                    /*if(user.user.emailVerified){
+                        window.location="/WOMENDEV-SocialNetworkProject/#/profile";}*/
 
                 }).catch((error) => {
+                    console.log(error);
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     const credential = error.credential;
-                    console.log(errorMessage);
-                    console.log(errorCode);
+                   // console.log(errorMessage);
+                   // console.log(errorCode);
+                   if (errorCode === 'auth/account-exists-with-different-credential') {
+                    alert('You have already signed up with a different auth provider for that email.');
+                   } else {
+                    console.error(error);
+                   }
                 });
-
+           } else {
+               firebase.auth().singOut();
+           }         
         };
 
         //Login GitHub
