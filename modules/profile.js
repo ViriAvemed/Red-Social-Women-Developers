@@ -1,6 +1,7 @@
 let Profile = {
     render : async () => {
         let view = `
+<<<<<<< HEAD
            
              <div class="row">
                 <div class="col d-flex justify-content-center">
@@ -33,10 +34,31 @@ let Profile = {
                     <p class="">Soy estudiante en Laboratoria</p>
                 </div>
              </div>
+
         `;
         return view
 
-    }, after_render : async () => {}
+    }, 
+    after_render : async () => {
+        //Agrega biografía a perfil de usuario
+    const addBiography = (textBio) => {
+        const uid = firebase.auth().currentUser.uid;
+        firebase.database().ref(`profile/${uid}/biography`).set({
+          texto: textBio
+        });
+        console.log('Agregado??');
+      };
+  
+      //Verifica si hay una biografía en la data
+      const searchForBiography = (textBio) => {
+        const uid = firebase.auth().currentUser.uid;
+        firebase.database().ref(`profile/${uid}/biography`).once('value')
+          .then(function (snapshot) {
+            textBio(snapshot.val());
+            // console.log(snapshot.val());
+          })
+      };
+    }
 };
 
 export default Profile;

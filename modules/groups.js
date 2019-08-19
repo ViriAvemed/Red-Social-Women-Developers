@@ -1,6 +1,7 @@
 let Groups = {
     render : async () => {
         let view = `
+
            <main class="container">
             <div class="row">
 <!--            Barra lateral izquierda-->
@@ -57,6 +58,7 @@ let Groups = {
                 </div>  
             </div>
         </main>
+
         `;
         return view
     },
