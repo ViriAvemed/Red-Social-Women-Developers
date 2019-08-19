@@ -14,7 +14,7 @@ let Profile = {
             </div>
             
             <div class="row">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center"> 
                     </p><i class="icon-pencil"></i>
                 </div>
              </div>
@@ -25,7 +25,7 @@ let Profile = {
              </div>
              <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <p class="">Tengo 30 años.</p>
+                    <p class="">Tengo 27 años.</p>
                 </div>
              </div>
              <div class="row">
