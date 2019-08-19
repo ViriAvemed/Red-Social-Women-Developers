@@ -15,7 +15,7 @@ let Login = {
                 </div>
                 
                 <div class="row">
-                    <div class="ccolumna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="password" class="inputPassword" id="passwordLogin" placeholder="Contraseña"></div>                
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="password" class="inputPassword" id="passwordLogin" placeholder="Contraseña"></div>                
                 </div>
                 
                 <div class="row">
