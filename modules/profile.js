@@ -1,8 +1,6 @@
 let Profile = {
     render : async () => {
         let view = `
-<<<<<<< HEAD
-           
              <div class="row">
                 <div class="col d-flex justify-content-center">
                     <h1 class="misGrupos">Cristina Suárez</h1>
