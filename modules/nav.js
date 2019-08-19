@@ -8,7 +8,7 @@ let Navbar = {
                     <div class="col-auto d-none d-md-block logo">
                           <a href="#"><img src="img/logo.png" alt="" > </a>
                     </div>
-                    <div class="col-12 col-sm-8 col-lg-6 order-2 order-sm-1 buscar mb-2 mb-sm-2">
+                    <div class="col-12 col-sm-8 col-lg-6 order-2 order-sm-1  mb-2 mb-sm-2 buscar">
                             <form action="">
                                 <div class="row no-gutters">
                                     <div class="col-10">
