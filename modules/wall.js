@@ -124,7 +124,7 @@ let Wall = {
                          
                     </div>
                    
-                    <p class="texto">${doc.data().post}</p>
+                    <p class="texto" data=id="${doc.id}" value="${doc.id}">${doc.data().post}</p>
                     <div class="caja-botones d-flex justify-content-between align-items-center">
                          <div>
                             <button class="btnLike"><i class="icon-heart-empty"></i></button>
@@ -134,7 +134,7 @@ let Wall = {
                           <div class="col d-flex justify-content-end">
                             <p class="contador">1<i class="icon-heart"></i></p>
                             <button id="btnP" type="submit" class="delete-btn" data-id="${doc.id}"><i class="icon-trash"></i></button>
-                            <button id="btnE" type="submit" class="btn-editar" data-id="${doc.id}"><i class="icon-edit"></i></button>
+                            <button id="btnE"><i class="icon-edit btn-editar" data-id="${doc.id}"></i></button>
                           </div>
                      </div>
                             
@@ -166,29 +166,37 @@ let Wall = {
 
 
 
-        //Funcion editar post
-        // const editar = (id) =>{
-        //
-        //     const posts = posts1.value;
-        //     const washingtonRef = db.collection("users").doc(id);
-        //     return washingtonRef.update({
-        //         post: posts,
-        //     })
-        //         .then(function() {
-        //             console.log("Document successfully updated!");
-        //         })
-        //         .catch(function(error) {
-        //             console.error("Error updating document: ", error);
-        //         });
-        // };
-        //
-        // posting.addEventListener("click", (e) =>{
-        //     if(e.target.tagName !== "INPUT" || !e.target.classList.contains("btn-editar")){
-        //         return;
-        //     }
-        //     console.log(!e.target.classList.contains("btn-editar"));
-        //     editar(e.target.id);
-        // });
+        // Funcion editar post
+        const editar = (id) =>{
+
+            const posts = posts1.value;
+
+            const washingtonRef = db.collection("users").doc(id);
+            return washingtonRef.update({
+                post: posts,
+
+
+            })
+                .then(function() {
+                    console.log("Document successfully updated!");
+                })
+                .catch(function(error) {
+                    console.error("Error updating document: ", error);
+                });
+
+        };
+
+
+        posting.addEventListener("click", (e) =>{
+            if(e.target.tagName !== "I" || !e.target.classList.contains("btn-editar")){
+                return;
+            }
+            const editText = document.querySelector(`${doc.data().post}'`);
+            editText.contentEditable=true;
+            editText.focus();
+            editar(e.target.dataset.id,editText.textContent);
+        });
+
 
 
 
