@@ -97,9 +97,9 @@ let Wall = {
 
         //add comments
         const guardar = () => {
-            const posts = posts1.value;
+            const publication = posts1.value;
             db.collection("users").add({
-                post: posts,
+                post: publication,
             })
                 .then(function (docRef) {
                     console.log("Document written with ID: ", docRef.id);
@@ -124,7 +124,7 @@ let Wall = {
                          
                     </div>
                    
-                    <p class="texto" data=id="${doc.id}" value="${doc.id}">${doc.data().post}</p>
+                    <p class="texto text-publication" data-id="${doc.id}" value="${doc.id}">${doc.data().post}</p>
                     <div class="caja-botones d-flex justify-content-between align-items-center">
                          <div>
                             <button class="btnLike"><i class="icon-heart-empty"></i></button>
@@ -133,8 +133,8 @@ let Wall = {
                           </div>
                           <div class="col d-flex justify-content-end">
                             <p class="contador">1<i class="icon-heart"></i></p>
-                            <button id="btnP" type="submit" class="delete-btn" data-id="${doc.id}"><i class="icon-trash"></i></button>
-                            <button id="btnE"><i class="icon-edit btn-editar" data-id="${doc.id}"></i></button>
+                            <button id="btnP"  class="delete-btn" data-id="${doc.id}"><i class="icon-trash"></i></button>
+                            <button id="btnE" class="btn-editar" data-id="${doc.id}"><i class="icon-edit" ></i></button>
                           </div>
                      </div>
                             
@@ -167,15 +167,10 @@ let Wall = {
 
 
         // Funcion editar post
-        const editar = (id) =>{
-
-            const posts = posts1.value;
-
-            const washingtonRef = db.collection("users").doc(id);
+        const editar = (id,publication) =>{
+            const washingtonRef = db.collection("posts").doc(id);
             return washingtonRef.update({
-                post: posts,
-
-
+                post: publication,
             })
                 .then(function() {
                     console.log("Document successfully updated!");
@@ -183,15 +178,16 @@ let Wall = {
                 .catch(function(error) {
                     console.error("Error updating document: ", error);
                 });
-
         };
 
 
         posting.addEventListener("click", (e) =>{
-            if(e.target.tagName !== "I" || !e.target.classList.contains("btn-editar")){
+            if(e.target.tagName !== "BUTTON" || !e.target.classList.contains("btn-editar")){
                 return;
             }
-            const editText = document.querySelector(`${doc.data().post}'`);
+            console.log("entra a la funcion y funciona");
+            const editText = document.querySelector(`p.text-publication[data-id='${e.target.dataset.id}']`);
+            console.log(editText.textContent);
             editText.contentEditable=true;
             editText.focus();
             editar(e.target.dataset.id,editText.textContent);
