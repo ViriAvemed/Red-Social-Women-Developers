@@ -11,7 +11,7 @@ let Register = {
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><a href="#login"> <i class="icon-left-circled"></i> </a></div>                
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><a href="#login"> <i style="background: #C35B50" class="icon-left-circled"></i> </a></div>                
                 </div>
                 
                 <div class="row">
@@ -29,7 +29,7 @@ let Register = {
                     <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" > <span id="emailInvalid"></span></div>               
                 </div>
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" ><input type="password" id="registerPassword" placeholder="Tu contraseña debe tener más de ses caracteres"></div>                
+                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" ><input type="password" id="registerPassword" placeholder="Tu contraseña debe tener más de seis carácteres"></div>                
                 </div>
                 <div class="row">
                     <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><span id="passwordInvalid"></span></div>                
@@ -123,4 +123,5 @@ let Register = {
 
 };
 export default Register;
+
 
