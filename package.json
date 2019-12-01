@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/ViriAvemed/WOMENDEV-SocialNetworkProject#readme",
   "dependencies": {
-    "firebase": "^6.3.5"
+    "firebase": "^6.3.5",
+    "md-links-v100": "^0.1.2"
   },
   "devDependencies": {},
   "description": ""
