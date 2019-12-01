@@ -74,8 +74,8 @@ let Register = {
             let confirmPassword = idConfirmPassword.value;
 
             if (name === ""){
-              spanName.innerHTML="No olvides ingresar tu nombre";
-              return;
+                spanName.innerHTML="No olvides ingresar tu nombre";
+                return;
             }
 
             if(email.length < 6){
@@ -99,11 +99,11 @@ let Register = {
                 })
                 .catch(function(error) {
 
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
-            });
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log(errorCode);
+                    console.log(errorMessage);
+                });
 
         };
 
@@ -112,8 +112,8 @@ let Register = {
             user.sendEmailVerification().then(function () {
                 sentEmail.innerHTML ="Se ha enviado un mensaje de confirmación tu correo eléctronico.";
             }).catch(function (error) {
-               console.log(error);
-                });
+                console.log(error);
+            });
 
         };
 
@@ -123,4 +123,3 @@ let Register = {
 
 };
 export default Register;
-
