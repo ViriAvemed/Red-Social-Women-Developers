@@ -1,41 +1,65 @@
 let Login = {
     render: async () => {
         let view = `
-            <div class="container backLogin">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 d-md-none  d-lg-block" style="display: none;">
+                <figure>
+                    <img class="img-home" src="img/background.jpg" alt="Imagen de inicio">
+                </figure>
+                
+            </div>
+                <div class="col-lg-6 col-sm-12">
+                <div class="container backLogin">
                 <div class="row">
-                    <div class="ccolumna col-lg-6 col-sm-12 d-flex justify-content-center"><img class="logo" src="img/logo.png" alt=""></div>                
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center font-weight-bold" style="padding-top: 10%; padding-bottom: 0; margin-bottom: 0;"> 
+                         <p style="font-size: 3em; color: #C35B50; ">WOMEN</p> 
+
+                     </div>                
+                </div>
+                <div class="row">
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center font-weight-bold"> 
+                         <p style="font-size: 3em; color:#C35B50;">DEVELOPERS</p> 
+
+                     </div>                
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><p style="font-size: 25px"> Inicia sesión</p></div>                
+                    <div class="columna  col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"><p style="font-size: 25px"> Inicia sesión</p></div>                
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="text" class="inputLogin" id="emailLogin" placeholder="Correo electrónico"></div>                
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"><input type="text" class="inputLogin" id="emailLogin" placeholder="Correo electrónico"></div>                
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><input type="password" class="inputPassword" id="passwordLogin" placeholder="Contraseña"></div>                
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"><input type="password" class="inputPassword" id="passwordLogin" placeholder="Contraseña"></div>                
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"> <button id="access">Ingresar</button></div>                
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"> <button id="access">Ingresar</button></div>                
                 </div>
                 
                 <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><button id="enterWithGoogle">Iniciar con Google</button></div>  
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"><button id="enterWithGoogle">Iniciar con Google</button></div>  
                 </div> 
+<!--                <div class="row">-->
+<!--                    <a class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login" id="idbtnfacebook" href="#"><i class="icon-facebook"></i>Iniciar con Facebook</a>               -->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login" id="idbtngithub"href="#"><i class="icon-github-circled-alt2"></i>Iniciar con Github</a></div>                -->
+<!--                </div>-->
                 <div class="row">
-                    <a class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" id="idbtnfacebook" href="#"><i class="icon-facebook"></i>Iniciar con Facebook</a>               
-                </div>
-                <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login" id="idbtngithub"href="#"><i class="icon-github-circled-alt2"></i>Iniciar con Github</a></div>                
-                </div>
-                <div class="row">
-                    <div class="columna col-lg-6 col-sm-12 d-flex justify-content-center contenedor-login"><p>¿Eres nueva?<a href = "./#/register"> -- REGISTRATE</a> </p></div>                
+                    <div class="columna col-sm-12 col-lg-9 d-flex justify-content-center contenedor-login"><p>¿Eres nueva?<a style="color: cornflowerblue;" href = "./#/register"> -- REGISTRATE</a> </p></div>                
                 </div>           
                 
             </div>
+            </div>
+            </div>
+            <footer class="footer">
+               <p>Women Developers © 2019</p>
+            </footer>
+            
+            
                            
       
             

@@ -1,5 +1,5 @@
 body{
-    background: #e9ebee;
+    background: white;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
 
@@ -11,7 +11,7 @@ a {color: #f7f7f7;}
 a:hover {text-decoration: underline;}
 
 header{
-    background: #1CBACC;
+    background: #C35B50;
     padding: 8px 0;
 }
 
@@ -48,7 +48,7 @@ header .buscar form button {
 
 
 header .buscar form button:hover{
-    background: #A2E8F2;
+    background: #C35B50;
     color: white;
 }
 
@@ -64,7 +64,7 @@ header .menu a{
 }
 
 header .menu a:hover{
-    color: #a2e8f2;
+    color: #C35B50;
 }
 
 header .menu .imagen{
@@ -78,6 +78,20 @@ header .menu .imagen img{
     border-radius: 100px ;
 }
 
+
+/*Footer*/
+.footer {
+    background: #C35B50;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    top: 91%;
+    position: fixed;
+    width: 100%;
+}
 /*MAIN*/
 
 main{
@@ -100,7 +114,7 @@ main .barra-lateral-izquierda nav a{
     display: block;
     padding: 3px;
     font-family: Roboto, sans-serif;
-    color: #1CBACC;
+    color: #C35B50;
 
 }
 
@@ -154,27 +168,27 @@ main .contenido-principal .publicar form .contenedor-botones{
 }
 
 main .contenido-principal .publicar form .contenedor-botones a {
-    color: #1cbacc;
+    color: #C35B50;
     font-size: 20px;
     margin-right: 10px;
 }
 
 main .contenido-principal .publicar form .contenedor-botones a:hover{
-    color: #a2e8f2;
+    color: #D87D74;
 }
 
 main .contenido-principal .publicar form button{
-    border: 1px solid #1cbacc;
+    border: 1px solid #C35B50;
     padding: 5px 30px;
     font-size: 14px;
     font-family: Roboto, sans-serif;
-    background: linear-gradient(to bottom, #1cbacc, #44d5e5 100%);
+    background: linear-gradient(to bottom, #C35B50, #D87D74 100%);
     color: white;
     border-radius: 3px;
     cursor: pointer;
 }
 main .contenido-principal .publicar form button:hover{
-    background: linear-gradient(to bottom, #44d5e5 , #1cbacc 100%);
+    background: linear-gradient(to bottom, #D87D74 , #C35B50 100%);
 
 
 }
@@ -199,7 +213,7 @@ main .contenido-principal .publicar form button:hover{
 #name{
     font-family: Roboto,sans-serif;
     font-size: 16px;
-    color: #1cbacc;
+    color: #C35B50;
     line-height: 16px;
     display: inline-block;
     margin-bottom: 10px;
@@ -224,7 +238,7 @@ main .contenido-principal .publicar form button:hover{
 }
 
 .btnLike{
-    color: #1cbacc;
+    color: #C35B50;
     background: #e9ebee;
     cursor: pointer;
     padding: 10px 5px;
@@ -237,7 +251,7 @@ main .contenido-principal .publicar form button:hover{
 
 }
 .btnLike:hover{
-    background: #1cbacc;
+    background: #C35B50;
     color:white;
 }
 
@@ -250,11 +264,12 @@ main .contenido-principal .publicar form button:hover{
 /*Grupos*/
 
 .misGrupos{
-    color: #1cbacc;
+    color: #C35B50;
     font-size: 30px;
     font-family: Roboto,sans-serif;
     padding-top: 10px;
     padding-bottom: 30px;
+    font-weight: bold;
 }
 
 .grupos {
@@ -262,6 +277,7 @@ main .contenido-principal .publicar form button:hover{
     font-size: 18px;
     font-family: Roboto,sans-serif;
     padding: 10px 0;
+    font-weight: bold;
 }
 
 /*BARRA LATERAL DERECHA*/
@@ -282,7 +298,7 @@ main .barra-lateral-derecha .ads a img{
 }
 
 .textF{
-    color: #1cbacc;
+    color: #C35B50;
     font-size: 14px;
 }
 .copyright{
@@ -295,7 +311,6 @@ main .barra-lateral-derecha .ads a img{
 /*LOGIN*/
 
 .contenedor-login{
-    background: rgba(133,224,214,.85);
     text-align: center;
     padding: 5px;
     border: none;
@@ -303,8 +318,8 @@ main .barra-lateral-derecha .ads a img{
 }
 
 .contenedor-login button{
-    border: 1px solid #17a2b8;
-    background: #17a2b8;
+    border: 1px solid #C35B50;
+    background: #C35B50;
     color: white;
     border-radius: 8px;
     font-size: 16px;
@@ -315,7 +330,7 @@ main .barra-lateral-derecha .ads a img{
 }
 
 .contenedor-login input{
-    border: 1px solid #1cbacc;
+    border: 1px solid #C35B50;
     border-radius: 8px;
     font-size: 16px;
     font-family: Roboto,sans-serif;
@@ -326,17 +341,18 @@ main .barra-lateral-derecha .ads a img{
 
 
 .contenedor-login p{
-    color: brown;
+    color: #C35B50;
     font-size: 18px;
     font-family: Roboto,sans-serif;
     text-align: center;
 }
 
-
+.img-home {
+    width: 100%;
+}
 .backLogin{
-    background-image: url("https://image.freepik.com/foto-gratis/empleado-rubio-que-sostiene-ordenador-portatil-fondo-blanco_23-2148180716.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 
 }
 
